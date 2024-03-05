@@ -33,6 +33,30 @@ Fig. 3: Local/Global k-NN Attention. In each group of transformer subblocks, we 
 
 
 ## Usage
+
+Environment:
+- Python 3.8.5
+- Pytorch 1.9.0+cu111
+- torchvision 0.10.0+cu111
+- timm 0.4.12
+- mmcv-full 1.3.9
+
+
+### Pretrain (4 × 3090 GPUs, 1 weeks)
+
+1. Preparing the MillionAID: Download the [MillionAID](https://captain-whu.github.io/DiRS/). It is easy for users to record image names and revise corresponding codes `prtrain`.
+
+2. To pretrain PCViT with **multi-node distributed training**, run the following on 1 node with 4 GPUs each (only mask 75% is supported): (batchsize: 128=4*32)
+
+```bash
+python -m torch.distributed.launch --nproc_per_node 4 main_pretrain.py \
+--batch_size 32 --model fastconvmae_convvitae_base_patch16 \
+--norm_pix_loss --mask_ratio 0.75 --epochs 100 \
+--warmup_epochs 20 --blr 6.0e-4 --weight_decay 0.05
+```
+*Note: Padding the convolutional kernel of PCM in the pretrained PCViT with `convertK1toK3.py` for finetuning.*
+
+
 ### Finetune
 We use PyTorch 1.9.0 or NGC docker 21.06, and mmcv 1.3.9 for the experiments.
 ```bash
@@ -62,23 +86,6 @@ python -m torch.distributed.launch --nnodes <Num Machines> --node_rank <Rank of 
 ```
 
 
-### Pretrain
-To pretrain FastConvMAE-Base with **multi-node distributed training**, run the following on 1 node with 4 GPUs each (only mask 75% is supported):
-
-```bash
-python submitit_pretrain.py \
-    --job_dir ${JOB_DIR} \
-    --nodes 1 \
-    --batch_size 64 \
-    --model fastconvmae_convvit_base_patch16 \
-    --norm_pix_loss \
-    --mask_ratio 0.75 \
-    --epochs 50 \
-    --warmup_epochs 10 \
-    --blr 6.0e-4 --weight_decay 0.05 \
-    --data_path ${IMAGENET_DIR}
-```
-
 ## Citation Details
 If you find this code helpful, please kindly cite:
 
@@ -96,4 +103,4 @@ If you find this code helpful, please kindly cite:
 ```
 
 ## Acknowledge
-We acknowledge the excellent implementation from [mmdetection](https://github.com/open-mmlab/mmdetection), [MAE](https://github.com/facebookresearch/mae).
+We acknowledge the excellent implementation from [mmdetection](https://github.com/open-mmlab/mmdetection), [MAE](https://github.com/facebookresearch/mae), [Remote-Sensing-RVSA](https://github.com/ViTAE-Transformer/Remote-Sensing-RVSA)
