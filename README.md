@@ -81,10 +81,6 @@ python submitit_pretrain.py \
 ## Citation Details
 If you find this code helpful, please kindly cite:
 
-[1]J. Li, P. Tian, R. Song, H. Xu, Y. Li and Q. Du, "PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery," in IEEE Transactions on Geoscience and Remote Sensing, vol. 62, pp. 1-15, 2024, Art no. 5608115, doi: 10.1109/TGRS.2024.3360456.
-keywords: {Transformers;Feature extraction;Task analysis;Object detection;Detectors;Nickel;Semantics;Convolutional neural network (CNN);feature pyramid network (FPN);multiscale object detection;remote-sensing images (RSIs);vision transformer (ViT)},
-
-BibTeX entry:
 ```
 @ARTICLE{10417056,
   author={Li, Jiaojiao and Tian, Penghao and Song, Rui and Xu, Haitao and Li, Yunsong and Du, Qian},
