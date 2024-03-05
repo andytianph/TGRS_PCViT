@@ -28,12 +28,22 @@ References
 --
 If you find this code helpful, please kindly cite:
 
-[1]J. Li, Y. Liu, R. Song, Y. Li, K. Han and Q. Du, "Sal2RN: A Spatial-Spectral Salient Reinforcement Network for Hyperspectral and LiDAR Data Fusion Classification," in IEEE Transactions on Geoscience and Remote Sensing, doi: 10.1109/TGRS.2022.3231930.
+[1]J. Li, P. Tian, R. Song, H. Xu, Y. Li and Q. Du, "PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery," in IEEE Transactions on Geoscience and Remote Sensing, vol. 62, pp. 1-15, 2024, Art no. 5608115, doi: 10.1109/TGRS.2024.3360456.
+keywords: {Transformers;Feature extraction;Task analysis;Object detection;Detectors;Nickel;Semantics;Convolutional neural network (CNN);feature pyramid network (FPN);multiscale object detection;remote-sensing images (RSIs);vision transformer (ViT)},
+
 
 Citation Details
 --
 BibTeX entry:
 ```
-@ARTICLE{9998520,
-  author={Li, Jiaojiao and Liu, Yuzhe and Song, Rui and Li, Yunsong and Han, Kailiang and Du, Qian},
-  journal={
+@ARTICLE{10417056,
+  author={Li, Jiaojiao and Tian, Penghao and Song, Rui and Xu, Haitao and Li, Yunsong and Du, Qian},
+  journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+  title={PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery}, 
+  year={2024},
+  volume={62},
+  number={},
+  pages={1-15},
+  keywords={Transformers;Feature extraction;Task analysis;Object detection;Detectors;Nickel;Semantics;Convolutional neural network (CNN);feature pyramid network (FPN);multiscale object detection;remote-sensing images (RSIs);vision transformer (ViT)},
+  doi={10.1109/TGRS.2024.3360456}}
+```
