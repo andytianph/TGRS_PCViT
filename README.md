@@ -40,6 +40,7 @@ The models are trained on 4 3090 machines with 2 images per gpu, which makes a b
 The models are trained on 2 3090 machines with 2 images per gpu, which makes a batch size of 1 during training.
 
 | Model | Pretrain | Machine | FrameWork | Box mAP@50 | config | log | weight |
+| :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | 
 | PCViT | MPP | GPU | Faster RCNN | 80.25 | - | - | - |
 
 ## Usage
