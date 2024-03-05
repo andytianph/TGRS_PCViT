@@ -31,14 +31,14 @@ Fig. 3: Local/Global k-NN Attention. In each group of transformer subblocks, we 
 
 ## Results and Models
 #### MillionAID
-The models are trained on 4 3090 machines with 2 images per gpu, which makes a batch size of 32 during training.
+The models are trained on 4 x 3090 machines with 2 images per gpu, which makes a batch size of 32 during training.
 |Pretrain|Backbone | Input size | Params (M) | Pretrained model|
 |-------|-------- | ----------  | ----- | ----- |
 | MPP | PCViT | 224 × 224 | 112 | [Weights](--) |
 
 
 #### Results from this repo on DIOR
-The models are trained on 2 3090 machines with 2 images per gpu, which makes a batch size of 1 during training.
+The models are trained on 2 x 3090 machines with 2 images per gpu, which makes a batch size of 1 during training.
 
 | Model | Pretrain | Machine | FrameWork | Box mAP@50 | config | log | weight |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | 
