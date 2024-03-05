@@ -1,0 +1,41 @@
+/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torchvision/transforms/transforms.py:834: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  warnings.warn(
+submitit ERROR (2023-04-11 22:18:48,210) - Submitted job triggered an exception
+Traceback (most recent call last):
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/_submit.py", line 11, in <module>
+    submitit_main()
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/submission.py", line 72, in submitit_main
+    process_job(args.folder)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/submission.py", line 65, in process_job
+    raise error
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/submission.py", line 54, in process_job
+    result = delayed.result()
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/utils.py", line 133, in result
+    self._result = self.function(*self.args, **self.kwargs)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/submitit_pretrain.py", line 60, in __call__
+    trainer.main(self.args)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/main_pretrain.py", line 198, in main
+    train_stats = train_one_epoch(
+  File "/home/data/jiyuqing/.tph/FastConvMAE/engine_pretrain.py", line 48, in train_one_epoch
+    loss, _, _ = model(samples, mask_ratio=args.mask_ratio)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/models_fastconvmae.py", line 277, in forward
+    latent, mask, ids_restore = self.forward_encoder(imgs, mask_ratio)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/models_fastconvmae.py", line 199, in forward_encoder
+    x = blk(x, mask_for_patch1)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/vision_transformer.py", line 139, in forward
+    x1 = self.attn(mask[0] * x)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 443, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torch/nn/modules/conv.py", line 439, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 23.69 GiB total capacity; 1012.46 MiB already allocated; 14.94 MiB free; 1.03 GiB reserved in total by PyTorch)

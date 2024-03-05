@@ -1,0 +1,31 @@
+/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torchvision/transforms/transforms.py:834: UserWarning: Argument interpolation should be of type InterpolationMode instead of int. Please, use InterpolationMode enum.
+  warnings.warn(
+submitit ERROR (2023-04-11 22:07:02,214) - Submitted job triggered an exception
+Traceback (most recent call last):
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/_submit.py", line 11, in <module>
+    submitit_main()
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/submission.py", line 72, in submitit_main
+    process_job(args.folder)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/submission.py", line 65, in process_job
+    raise error
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/submission.py", line 54, in process_job
+    result = delayed.result()
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/submitit/core/utils.py", line 133, in result
+    self._result = self.function(*self.args, **self.kwargs)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/submitit_pretrain.py", line 60, in __call__
+    trainer.main(self.args)
+  File "/home/data/jiyuqing/.tph/FastConvMAE/main_pretrain.py", line 132, in main
+    dataset_train = datasets.ImageFolder(os.path.join(args.data_path, 'train'), transform=transform_train)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 310, in __init__
+    super(ImageFolder, self).__init__(root, loader, IMG_EXTENSIONS if is_valid_file is None else None,
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 145, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 221, in find_classes
+    return find_classes(directory)
+  File "/home/jiyuqing/anaconda3/envs/vitdet_tph/lib/python3.9/site-packages/torchvision/datasets/folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+FileNotFoundError: [Errno 2] No such file or directory: '/home/data/diaoyan/temp/Million-AID/test/train'
