@@ -96,7 +96,3 @@ If you find this code helpful, please kindly cite:
 
 ## Acknowledge
 We acknowledge the excellent implementation from [mmdetection](https://github.com/open-mmlab/mmdetection), [MAE](https://github.com/facebookresearch/mae).
-
-
-## References
-The codes of Pretraining & Scene Classification part mainly from [MAE](https://github.com/facebookresearch/mae).
