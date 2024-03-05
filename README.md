@@ -87,7 +87,7 @@ After install the two repos, install timm and einops, i.e.,
 pip install timm==0.4.9 einops
 ```
 
-Download the pretrained models from [MAE](https://github.com/facebookresearch/mae) or [ViTAE](https://github.com/ViTAE-Transformer/ViTAE-Transformer), and then conduct the experiments by
+Download the pretrained models from [MAE](https://github.com/facebookresearch/mae), [ViTAE](https://github.com/ViTAE-Transformer/ViTAE-Transformer) or [PCViT](weight), and then conduct the experiments by
 
 ```bash
 # for single machine
