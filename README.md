@@ -8,8 +8,7 @@
   <a href="#usage">Usage</a> |
 </p >
 
-This branch contains the official pytorch implementation for [TGRS'24] "PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery"
-<a href="https://ieeexplore.ieee.org/document/10417056">PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery</a>.
+This branch contains the official pytorch implementation for <a href="https://ieeexplore.ieee.org/document/10417056">PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery</a> [TGRS'24].
 
 ## Updates
 ### 2023.10.18
