@@ -14,7 +14,7 @@ This branch contains the official pytorch implementation for <a href="https://ie
 
 ## Updates
 ### 2023.10.18
-Release the initial unofficial implementation of ViTDet with ViT-Base model! It obtains 51.1 mAP and 45.5 mAP on detection and segmentation, respectively. The weights and logs will be uploaded soon. 
+The codes of the PCViT has been released. The weights and logs will be uploaded soon. 
 
 ## Introduction
 This repository contains codes, models and test results for the paper "[PCViT: A Pyramid Convolutional Vision Transformer Detector for Object Detection in Remote-Sensing Imagery](https://ieeexplore.ieee.org/document/10417056)".
