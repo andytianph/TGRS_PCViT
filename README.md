@@ -34,7 +34,7 @@ Fig. 3: **Local/Global k-NN Attention.** In each group of transformer subblocks,
 The models are trained on 4 x 3090 machines with 2 images per gpu, which makes a batch size of 32 during training.
 |Pretrain|Backbone | Input size | Params (M) | Pretrained model|
 |-------|-------- | ----------  | ----- | ----- |
-| MPP | PCViT | 224 × 224 | 112 | [Weights](--) |
+| MPP | PCViT | 224 × 224 | 112 | [Weights](https://1drv.ms/u/s!AnKNZr8LDJzYrTziRBXVwrKKSyfl?e=x4JTgm) |
 
 
 #### Results from this repo on DIOR
@@ -42,7 +42,7 @@ The models are trained on 2 x 3090 machines with 2 images per gpu, which makes a
 
 | Model | Pretrain | Machine | FrameWork | Box mAP@50 | config | log | weight |
 | :----: | :----: | :----: | :----: | :----: | :----: | :----: | :----: | 
-| PCViT | MPP | GPU | Faster RCNN | 80.25 | [config](-) | [log](-) | [Weights](--) |
+| PCViT | MPP | GPU | Faster RCNN | 80.25 | [config](-) | [log](-) | [Weights](https://1drv.ms/u/s!AnKNZr8LDJzYrT3dO0UunonUhZQ_?e=Qq5kh2) |
 
 ## Usage
 
